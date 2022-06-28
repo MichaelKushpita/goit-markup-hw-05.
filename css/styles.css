@@ -117,15 +117,17 @@ ul {
     color: var(--accent-color);
 }
 .navlist a {
+    display: block;
     padding: 32px 0;
     color: var(--primary-text-color);
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
     letter-spacing:0.02em;
+    transition: color 250ms var(--function-time);
 }
-.navlist a {
-    display: block;
+.link-current:hover, .link-current:focus {
+    color: var(--accent-color);
 }
 .link-current {
     position: relative;
@@ -242,7 +244,8 @@ ul {
     align-items: center;
     text-align: center;
     letter-spacing: 0.06em;
-    transition: background-color 250ms var(--function-time),color 250ms var(--function-time);
+    transition: background-color 250ms var(--function-time),
+    color 250ms var(--function-time);
 }
 .button:hover {
     background: #188CE8;
@@ -412,7 +415,8 @@ ul {
     justify-content: center;
     border-radius: 50px;
     color:var(--icon-color);
-    transition: background-color  250ms var(--function-time);
+    transition: background-color  250ms var(--function-time),
+    color 250ms var(--function-time);
 }
 .icon-box:hover, .icon-box:focus {
     background: var(--accent-color);
@@ -420,8 +424,6 @@ ul {
 }
 .masters-icon {
     fill: currentColor;
-    transition: fill 250ms var(--function-time);
-        
 }
 /*========= секція постоянні клієнти====== */
 
@@ -447,7 +449,8 @@ ul {
     color: var(--icon-color);
     border: 1px solid var(--icon-color);
     border-radius: 4px;
-    transition: background-color 250ms var(--function-time);
+    transition: border-color 250ms var(--function-time),
+    color 250ms var(--function-time);
 }
 .clients-box:hover, .clients-box:focus {
     border-color:var(--accent-color);
@@ -455,7 +458,6 @@ ul {
 }
 .icon-clients {
     fill: currentColor;
-    transition: fill 250ms var(--function-time);
 }
 
 /* footer list */
@@ -626,7 +628,9 @@ ul {
     background-color: var(--secondary-background-color);
     border-radius: 4px;
     border:0;
-    transition: background-color 250ms var(--function-time),color 250ms var(--function-time);
+    transition: background-color 250ms var(--function-time),
+    color 250ms var(--function-time),
+    box-shadow 250ms var(--function-time);
 
 }
 .portfolio-button:hover, .portfolio-button:focus {
@@ -708,8 +712,8 @@ ul {
 .portfolio-flex > .gallery-list:nth-last-child(-n+3) {
     margin-bottom: 0;
 }
-.gallery-list:hover .portfolio-resourse,
-.gallery-list:focus .portfolio-resourse {
+.gallery-link:hover .portfolio-resourse,
+.gallery-link:focus .portfolio-resourse {
     transform: translateY(0);
     opacity: 0.9;
 }
@@ -726,7 +730,8 @@ ul {
     align-items: center;
 
     height: 100%;
-    padding: 63px 24px;
+    padding-right:  24px;
+    padding-left: 24px;
 
     font-weight: 400;
     font-size: 18px;
